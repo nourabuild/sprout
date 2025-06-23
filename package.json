@@ -1,0 +1,34 @@
+{
+    "name": "sprout-design-tokens",
+    "version": "1.0.0",
+    "description": "Design token system using Style Dictionary with DTCG format and OKLCH color support",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run build:tokens",
+        "build:tokens": "node sd.config.js --verbose",
+        "build:tokens:light": "npm run build:tokens -- --theme=light",
+        "clean": "rm -rf light/build",
+        "dev": "npm run clean && npm run build:tokens",
+        "watch": "nodemon --watch light --ext json --exec \"npm run build:tokens:light\"",
+        "validate": "node scripts/validate-tokens.js",
+        "analyze": "node scripts/analyze-tokens.js"
+    },
+    "keywords": [
+        "design-tokens",
+        "style-dictionary",
+        "css-variables",
+        "oklch",
+        "dtcg"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "style-dictionary": "^4.0.1",
+        "minimist": "^1.2.8",
+        "culori": "^4.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}

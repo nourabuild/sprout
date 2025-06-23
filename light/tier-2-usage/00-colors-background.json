@@ -1,0 +1,110 @@
+{
+  "color": {
+    "background": {
+      "default": {
+        "$value": "{color.neutral.white}",
+        "$type": "color"
+      },
+      "default-hover": {
+        "$value": "{color.neutral.100}",
+        "$type": "color"
+      },
+      "subtle": {
+        "$value": "{color.neutral.100}",
+        "$type": "color"
+      },
+      "subtle-hover": {
+        "$value": "{color.neutral.200}",
+        "$type": "color"
+      },
+      "knockout": {
+        "$value": "{color.neutral.black}",
+        "$type": "color"
+      },
+      "brand": {
+        "$value": "{color.brand.gray.100}",
+        "$type": "color"
+      },
+      "brand-hover": {
+        "$value": "{color.brand.gray.200}",
+        "$type": "color"
+      },
+      "brand-disabled": {
+        "$value": "{color.neutral.200}",
+        "$type": "color"
+      },
+      "brand-knockout": {
+        "$value": "{color.brand.gray.800}",
+        "$type": "color"
+      },
+      "brand-knockout-hover": {
+        "$value": "{color.brand.gray.700}",
+        "$type": "color"
+      },
+      "utility": {
+        "error": {
+          "$value": "{color.utility.red.100}",
+          "$type": "color"
+        },
+        "error-knockout": {
+          "$value": "{color.utility.red.600}",
+          "$type": "color"
+        },
+        "warning": {
+          "$value": "{color.utility.yellow.100}",
+          "$type": "color"
+        },
+        "warning-knockout": {
+          "$value": "{color.utility.yellow.600}",
+          "$type": "color"
+        },
+        "success": {
+          "$value": "{color.utility.green.100}",
+          "$type": "color"
+        },
+        "success-knockout": {
+          "$value": "{color.utility.green.600}",
+          "$type": "color"
+        },
+        "info": {
+          "$value": "{color.utility.blue.100}",
+          "$type": "color"
+        },
+        "info-knockout": {
+          "$value": "{color.utility.blue.600}",
+          "$type": "color"
+        }
+      },
+      "dataviz": {
+        "primary": {
+          "$value": "{color.brand.gray.600}",
+          "$type": "color"
+        },
+        "primary-subtle": {
+          "$value": "{color.transparent.25}",
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": "{color.neutral.200}",
+          "$type": "color"
+        },
+        "tertiary": {
+          "$value": "{color.neutral.400}",
+          "$type": "color"
+        }
+      },
+      "disabled": {
+        "$value": "{color.neutral.200}",
+        "$type": "color"
+      },
+      "transparent": {
+        "$value": "{color.transparent.25}",
+        "$type": "color"
+      },
+      "transparent-strong": {
+        "$value": "{color.transparent.90}",
+        "$type": "color"
+      }
+    }
+  }
+}

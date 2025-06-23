@@ -1,0 +1,184 @@
+{
+    "color": {
+        "base": {
+            "white": {
+                "$value": "#ffffff",
+                "$type": "color",
+                "$description": "Pure white color"
+            },
+            "black": {
+                "$value": "#000000",
+                "$type": "color",
+                "$description": "Pure black color"
+            },
+            "gray": {
+                "50": {
+                    "$value": "#f9fafb",
+                    "$type": "color"
+                },
+                "100": {
+                    "$value": "#f3f4f6",
+                    "$type": "color"
+                },
+                "200": {
+                    "$value": "#e5e7eb",
+                    "$type": "color"
+                },
+                "300": {
+                    "$value": "#d1d5db",
+                    "$type": "color"
+                },
+                "400": {
+                    "$value": "#9ca3af",
+                    "$type": "color"
+                },
+                "500": {
+                    "$value": "#6b7280",
+                    "$type": "color"
+                },
+                "600": {
+                    "$value": "#4b5563",
+                    "$type": "color"
+                },
+                "700": {
+                    "$value": "#374151",
+                    "$type": "color"
+                },
+                "800": {
+                    "$value": "#1f2937",
+                    "$type": "color"
+                },
+                "900": {
+                    "$value": "#111827",
+                    "$type": "color"
+                }
+            },
+            "blue": {
+                "50": {
+                    "$value": "#eff6ff",
+                    "$type": "color"
+                },
+                "100": {
+                    "$value": "#dbeafe",
+                    "$type": "color"
+                },
+                "500": {
+                    "$value": "#3b82f6",
+                    "$type": "color"
+                },
+                "600": {
+                    "$value": "#2563eb",
+                    "$type": "color"
+                },
+                "700": {
+                    "$value": "#1d4ed8",
+                    "$type": "color"
+                }
+            }
+        }
+    },
+    "dimension": {
+        "space": {
+            "0": {
+                "$value": "0px",
+                "$type": "dimension"
+            },
+            "1": {
+                "$value": "4px",
+                "$type": "dimension"
+            },
+            "2": {
+                "$value": "8px",
+                "$type": "dimension"
+            },
+            "3": {
+                "$value": "12px",
+                "$type": "dimension"
+            },
+            "4": {
+                "$value": "16px",
+                "$type": "dimension"
+            },
+            "5": {
+                "$value": "20px",
+                "$type": "dimension"
+            },
+            "6": {
+                "$value": "24px",
+                "$type": "dimension"
+            },
+            "8": {
+                "$value": "32px",
+                "$type": "dimension"
+            },
+            "10": {
+                "$value": "40px",
+                "$type": "dimension"
+            },
+            "12": {
+                "$value": "48px",
+                "$type": "dimension"
+            }
+        },
+        "font-size": {
+            "xs": {
+                "$value": "12px",
+                "$type": "dimension"
+            },
+            "sm": {
+                "$value": "14px",
+                "$type": "dimension"
+            },
+            "base": {
+                "$value": "16px",
+                "$type": "dimension"
+            },
+            "lg": {
+                "$value": "18px",
+                "$type": "dimension"
+            },
+            "xl": {
+                "$value": "20px",
+                "$type": "dimension"
+            },
+            "2xl": {
+                "$value": "24px",
+                "$type": "dimension"
+            },
+            "3xl": {
+                "$value": "30px",
+                "$type": "dimension"
+            }
+        }
+    },
+    "z-index": {
+        "dropdown": {
+            "$value": "1000",
+            "$type": "number"
+        },
+        "sticky": {
+            "$value": "1020",
+            "$type": "number"
+        },
+        "fixed": {
+            "$value": "1030",
+            "$type": "number"
+        },
+        "modal-backdrop": {
+            "$value": "1040",
+            "$type": "number"
+        },
+        "modal": {
+            "$value": "1050",
+            "$type": "number"
+        },
+        "popover": {
+            "$value": "1060",
+            "$type": "number"
+        },
+        "tooltip": {
+            "$value": "1070",
+            "$type": "number"
+        }
+    }
+}

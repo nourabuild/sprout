@@ -1,0 +1,31 @@
+{
+    "color": {
+        "brand": {
+            "primary": {
+                "$value": "{color.noura.500}",
+                "$type": "color",
+                "$description": "Primary brand color"
+            },
+            "primary-hover": {
+                "$value": "{color.noura.600}",
+                "$type": "color",
+                "$description": "Primary brand hover state"
+            },
+            "primary-active": {
+                "$value": "{color.noura.700}",
+                "$type": "color",
+                "$description": "Primary brand active state"
+            },
+            "primary-subtle": {
+                "$value": "{color.noura.50}",
+                "$type": "color",
+                "$description": "Subtle brand background"
+            },
+            "primary-muted": {
+                "$value": "{color.noura.100}",
+                "$type": "color",
+                "$description": "Muted brand background"
+            }
+        }
+    }
+}

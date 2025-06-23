@@ -1,0 +1,28 @@
+{
+  "animation": {
+    "fade": {
+      "quick": {
+        "$value": "{animation.duration.15}",
+        "$type": "duration"
+      },
+      "long": {
+        "$value": "{animation.duration.40}",
+        "$type": "duration"
+      }
+    },
+    "move": {
+      "quick": {
+        "$value": "{animation.duration.15}",
+        "$type": "duration"
+      },
+      "long": {
+        "$value": "{animation.duration.40}",
+        "$type": "duration"
+      }
+    },
+    "ease": {
+      "$value": "{animation.easing.default}",
+      "$type": "cubicBezier"
+    }
+  }
+}

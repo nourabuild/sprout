@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprout Design Tokens Demo</title>
+    <link rel="stylesheet" href="./light/build/css/tokens.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--ds-typography-font-family-helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+            line-height: var(--ds-typography-line-height-24, 1.5);
+            background-color: var(--ds-color-base-white);
+            color: var(--ds-color-base-black);
+            padding: var(--ds-dimension-space-6, 24px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: var(--ds-dimension-space-12, 48px);
+        }
+
+        .header h1 {
+            font-size: var(--ds-typography-font-size-32, 32px);
+            font-weight: var(--ds-typography-font-weight-700, 700);
+            color: var(--ds-color-noura-600);
+            margin-bottom: var(--ds-dimension-space-4, 16px);
+        }
+
+        .header p {
+            font-size: var(--ds-typography-font-size-18, 18px);
+            color: var(--ds-color-brand-gray-600);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--ds-dimension-space-6, 24px);
+            margin-bottom: var(--ds-dimension-space-12, 48px);
+        }
+
+        .card {
+            background: var(--ds-color-base-white);
+            border: var(--ds-border-width-1) solid var(--ds-color-brand-gray-200);
+            border-radius: var(--ds-border-radius-8);
+            padding: var(--ds-dimension-space-6, 24px);
+            box-shadow: var(--ds-shadow-sm-x, 0px) var(--ds-shadow-sm-y, 4px) var(--ds-shadow-sm-blur, 4px) var(--ds-shadow-sm-spread, 0px) var(--ds-shadow-sm-color, rgba(0, 0, 0, 0.1));
+            transition: all var(--ds-animation-duration-15) var(--ds-animation-easing-default);
+        }
+
+        .card:hover {
+            box-shadow: var(--ds-shadow-md-x, 0px) var(--ds-shadow-md-y, 8px) var(--ds-shadow-md-blur, 6px) var(--ds-shadow-md-spread, -6px) var(--ds-shadow-md-color, rgba(0, 0, 0, 0.1));
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: var(--ds-typography-font-size-20, 20px);
+            font-weight: var(--ds-typography-font-weight-700, 700);
+            color: var(--ds-color-brand-gray-900);
+            margin-bottom: var(--ds-dimension-space-4, 16px);
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: var(--ds-dimension-space-2, 8px);
+        }
+
+        .color-swatch {
+            height: 60px;
+            border-radius: var(--ds-border-radius-4);
+            border: var(--ds-border-width-1) solid var(--ds-color-brand-gray-300);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 10px;
+            padding: 2px 4px;
+            text-align: center;
+        }
+
+        .button {
+            background: var(--ds-color-noura-500);
+            color: var(--ds-color-base-white);
+            border: none;
+            border-radius: var(--ds-border-radius-4);
+            padding: var(--ds-dimension-space-3, 12px) var(--ds-dimension-space-6, 24px);
+            font-size: var(--ds-typography-font-size-16, 16px);
+            font-weight: var(--ds-typography-font-weight-400, 400);
+            cursor: pointer;
+            transition: all var(--ds-animation-duration-15) var(--ds-animation-easing-default);
+        }
+
+        .button:hover {
+            background: var(--ds-color-noura-600);
+            transform: translateY(-1px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--ds-color-noura-500);
+            border: var(--ds-border-width-2) solid var(--ds-color-noura-500);
+        }
+
+        .button.secondary:hover {
+            background: var(--ds-color-noura-50);
+        }
+
+        .spacing-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--ds-dimension-space-2, 8px);
+        }
+
+        .spacing-box {
+            background: var(--ds-color-noura-100);
+            border-radius: var(--ds-border-radius-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--ds-typography-font-size-12, 12px);
+            font-weight: var(--ds-typography-font-weight-400, 400);
+            color: var(--ds-color-noura-700);
+        }
+
+        .typography-demo h4 {
+            font-size: var(--ds-typography-font-size-16, 16px);
+            font-weight: var(--ds-typography-font-weight-700, 700);
+            margin-bottom: var(--ds-dimension-space-2, 8px);
+            color: var(--ds-color-brand-gray-700);
+        }
+
+        .typography-demo p {
+            margin-bottom: var(--ds-dimension-space-3, 12px);
+        }
+
+        .buttons-demo {
+            display: flex;
+            gap: var(--ds-dimension-space-3, 12px);
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sprout Design Tokens</h1>
+            <p>A comprehensive design system built with Style Dictionary, DTCG format, and OKLCH colors</p>
+        </div>
+
+        <div class="grid">
+            <!-- Colors -->
+            <div class="card">
+                <h3>Noura Brand Colors</h3>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-50);">
+                        <div class="color-label">50</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-100);">
+                        <div class="color-label">100</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-200);">
+                        <div class="color-label">200</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-300);">
+                        <div class="color-label">300</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-400);">
+                        <div class="color-label">400</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-500);">
+                        <div class="color-label">500</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-600);">
+                        <div class="color-label">600</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-700);">
+                        <div class="color-label">700</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-800);">
+                        <div class="color-label">800</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-noura-900);">
+                        <div class="color-label">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gray Colors -->
+            <div class="card">
+                <h3>Gray Scale</h3>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-100);">
+                        <div class="color-label">100</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-200);">
+                        <div class="color-label">200</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-300);">
+                        <div class="color-label">300</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-400);">
+                        <div class="color-label">400</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-500);">
+                        <div class="color-label">500</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-600);">
+                        <div class="color-label">600</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-700);">
+                        <div class="color-label">700</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-800);">
+                        <div class="color-label">800</div>
+                    </div>
+                    <div class="color-swatch" style="background-color: var(--ds-color-brand-gray-900);">
+                        <div class="color-label">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography -->
+            <div class="card">
+                <h3>Typography</h3>
+                <div class="typography-demo">
+                    <h4>Font Sizes</h4>
+                    <p style="font-size: var(--ds-typography-font-size-12);">12px - Small text</p>
+                    <p style="font-size: var(--ds-typography-font-size-14);">14px - Body small</p>
+                    <p style="font-size: var(--ds-typography-font-size-16);">16px - Body default</p>
+                    <p style="font-size: var(--ds-typography-font-size-18);">18px - Body large</p>
+                    <p style="font-size: var(--ds-typography-font-size-20);">20px - Heading small</p>
+                    <p style="font-size: var(--ds-typography-font-size-24);">24px - Heading medium</p>
+                    <p style="font-size: var(--ds-typography-font-size-32);">32px - Heading large</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="card">
+                <h3>Button Components</h3>
+                <div class="buttons-demo">
+                    <button class="button">Primary Button</button>
+                    <button class="button secondary">Secondary Button</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Spacing Scale</h3>
+                <div class="spacing-demo">
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-2); height: var(--ds-dimension-space-2);">8</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-3); height: var(--ds-dimension-space-3);">12</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-4); height: var(--ds-dimension-space-4);">16</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-5); height: var(--ds-dimension-space-5);">20</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-6); height: var(--ds-dimension-space-6);">24</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-8); height: var(--ds-dimension-space-8);">32</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-10); height: var(--ds-dimension-space-10);">40</div>
+                    <div class="spacing-box" style="width: var(--ds-dimension-space-12); height: var(--ds-dimension-space-12);">48</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Shadow Elevation</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: var(--ds-dimension-space-4);">
+                    <div style="height: 80px; background: white; border-radius: var(--ds-border-radius-8); box-shadow: var(--ds-shadow-sm-x) var(--ds-shadow-sm-y) var(--ds-shadow-sm-blur) var(--ds-shadow-sm-spread) var(--ds-shadow-sm-color); display: flex; align-items: center; justify-content: center; font-size: var(--ds-typography-font-size-12); font-weight: var(--ds-typography-font-weight-400);">
+                        Small
+                    </div>
+                    <div style="height: 80px; background: white; border-radius: var(--ds-border-radius-8); box-shadow: var(--ds-shadow-md-x) var(--ds-shadow-md-y) var(--ds-shadow-md-blur) var(--ds-shadow-md-spread) var(--ds-shadow-md-color); display: flex; align-items: center; justify-content: center; font-size: var(--ds-typography-font-size-12); font-weight: var(--ds-typography-font-weight-400);">
+                        Medium
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Design Token Statistics</h3>
+            <p>✨ <strong>OKLCH Colors:</strong> Future-proof color system with better perceptual uniformity</p>
+            <p>🎨 <strong>DTCG Format:</strong> Industry-standard Design Token Community Group format</p>
+            <p>🏗️ <strong>3-Tier Architecture:</strong> Base definitions → Usage patterns → Component tokens</p>
+            <p>🌓 <strong>Theme Support:</strong> Built-in light/dark theme switching</p>
+            <p>⚡ <strong>Build Pipeline:</strong> Automatic CSS, JS, and JSON generation</p>
+        </div>
+    </div>
+</body>
+</html>
