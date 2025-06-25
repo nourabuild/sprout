@@ -1,5 +1,8 @@
 # Sprout Design Tokens
 
+<img src="https://github.com/user-attachments/assets/26046d66-aa86-4949-ae17-661e511fa7a5" style="display:block;margin:auto;width:100%;height:auto;">
+
+
 Design tokens for the Noura design system, built with Style Dictionary and OKLCH colors.
 
 ## Setup
