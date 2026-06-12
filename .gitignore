@@ -9,7 +9,6 @@ pnpm-debug.log*
 light/build/
 dark/build/
 dist/
-build/
 
 # Runtime data
 pids
