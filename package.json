@@ -1,17 +1,56 @@
 {
-  "name": "sprout",
+  "name": "@nourabuild/sprout",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sprout design tokens built with Style Dictionary for CSS, JSON, React Native, SwiftUI, and Jetpack Compose.",
+  "main": "./build/json/tokens.json",
+  "style": "./build/css/variables.css",
+  "exports": {
+    ".": "./build/json/tokens.json",
+    "./tokens": "./tokens/core.json",
+    "./tokens.json": "./build/json/tokens.json",
+    "./css": "./build/css/variables.css",
+    "./css/variables.css": "./build/css/variables.css",
+    "./react-native": "./build/react-native/theme.ts",
+    "./swiftui": "./build/swiftui/SproutTheme.swift",
+    "./compose": "./build/compose/SproutTheme.kt",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build/",
+    "tokens/",
+    "config.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "style-dictionary build",
     "format": "prettier --write .",
-    "lint": "prettier --check ."
+    "lint": "prettier --check .",
+    "prepublishOnly": "npm run build && npm run lint"
   },
-  "keywords": [],
+  "keywords": [
+    "design-tokens",
+    "style-dictionary",
+    "sprout",
+    "css",
+    "react-native",
+    "swiftui",
+    "jetpack-compose"
+  ],
   "author": "Shohin Abdulkhamidov <abd.shohin@gmail.com> (https://noura.software/)",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nourabuild/sprout.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nourabuild/sprout/issues"
+  },
+  "homepage": "https://github.com/nourabuild/sprout#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "prettier": "3.8.3",
     "style-dictionary": "5.4.3"
