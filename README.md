@@ -2,12 +2,12 @@
 
 Design tokens for Sprout, authored in the Design Tokens Community Group 2025.10 format and built with Style Dictionary.
 
-The npm package name is `@nourabuild/sprout`. The unscoped `sprout` package name is already taken on npm, so this repository is prepared to publish under the `@nourabuild` scope.
+The npm package name is `@insidiouss/sprout`. The unscoped `sprout` package name is already taken on npm, and `@nourabuild` can be used later after the npm organization exists.
 
 ## Install
 
 ```bash
-npm install @nourabuild/sprout
+npm install @insidiouss/sprout
 ```
 
 ## Usage
@@ -15,26 +15,26 @@ npm install @nourabuild/sprout
 Import CSS custom properties:
 
 ```js
-import "@nourabuild/sprout/css/variables.css";
+import "@insidiouss/sprout/css/variables.css";
 ```
 
 Import generated JSON tokens:
 
 ```js
-import tokens from "@nourabuild/sprout/tokens.json" with { type: "json" };
+import tokens from "@insidiouss/sprout/tokens.json" with { type: "json" };
 ```
 
 Import the React Native theme:
 
 ```ts
-import { theme } from "@nourabuild/sprout/react-native";
+import { theme } from "@insidiouss/sprout/react-native";
 ```
 
 Native platform outputs are also included:
 
 ```text
-@nourabuild/sprout/swiftui
-@nourabuild/sprout/compose
+@insidiouss/sprout/swiftui
+@insidiouss/sprout/compose
 ```
 
 ## Source
@@ -66,7 +66,7 @@ Generated outputs:
 
 These repository changes prepare the package for npm publishing:
 
-- `package.json` uses the scoped package name `@nourabuild/sprout`.
+- `package.json` uses the scoped package name `@insidiouss/sprout`.
 - `publishConfig.access` is set to `public`, which is required for public scoped packages.
 - `repository`, `homepage`, and `bugs` point to `https://github.com/nourabuild/sprout`.
 - `files` limits the published package to `build/`, `tokens/`, `config.js`, `README.md`, and `LICENSE`.
@@ -75,7 +75,11 @@ These repository changes prepare the package for npm publishing:
 
 ## Publish to Npm
 
-Use an npm account that owns the `@nourabuild` scope or belongs to the `nourabuild` npm organization.
+Use the `insidiouss` npm account, which owns the `@insidiouss` scope.
+
+Before publishing, confirm these npm account requirements:
+
+- The logged-in npm account has two-factor authentication enabled for publishing, or it uses a granular npm access token with publish permission and 2FA bypass enabled.
 
 1. Install dependencies.
 
@@ -88,6 +92,7 @@ npm install
 ```bash
 npm login
 npm whoami
+npm profile get
 ```
 
 3. Build and validate the package.
@@ -107,8 +112,8 @@ npm publish --access public
 5. Confirm the upload.
 
 ```bash
-npm view @nourabuild/sprout version
-npm view @nourabuild/sprout dist.tarball
+npm view @insidiouss/sprout version
+npm view @insidiouss/sprout dist.tarball
 ```
 
 If the npm account scope is different, update `package.json` `name` and the install examples in this README before publishing.
