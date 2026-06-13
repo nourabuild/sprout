@@ -1,6 +1,6 @@
 {
   "name": "@insidiouss/sprout",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Sprout design tokens built with Style Dictionary for CSS, JSON, React Native, SwiftUI, and Jetpack Compose.",
   "main": "./build/json/tokens.json",
   "style": "./build/css/variables.css",

@@ -7,9 +7,15 @@ The public npm package is currently `@insidiouss/sprout`. The unscoped `sprout` 
 ## Requirements
 
 - The logged-in npm account owns the package scope.
-- The logged-in npm account has two-factor authentication enabled for publishing, or it uses a granular npm access token with publish permission and 2FA bypass enabled.
 - `npm pack --dry-run` shows the scoped package name, not `sprout`.
 - Every npm publish must use a new version number. npm never allows overwriting a version that was already published.
+
+Two-factor authentication is recommended for account security. `npm profile get` reports account-level 2FA only, so it can say `two-factor auth: disabled` even when the active CLI auth token is allowed to publish.
+
+Treat the actual `npm publish` result as the source of truth:
+
+- If publish succeeds, the active npm auth is valid.
+- If npm rejects a publish with a 2FA policy error, enable 2FA for publishing or use a granular npm access token with publish permission and 2FA bypass enabled.
 
 If publishing fails with this error, the version already exists on npm:
 
